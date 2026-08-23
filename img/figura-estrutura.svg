@@ -1,0 +1,25 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="figEstruturaTitle">
+  <title id="figEstruturaTitle">Diagrama simplificado mostrando cabeçalho, menu, conteúdo principal e rodapé empilhados verticalmente</title>
+  <rect x="0" y="0" width="480" height="320" fill="#ffffff"/>
+  <rect x="40" y="30" width="400" height="260" rx="14" fill="none" stroke="#d6d6e2" stroke-width="2"/>
+
+  <rect x="40" y="30" width="400" height="46" rx="14" fill="#eceafd"/>
+  <rect x="40" y="58" width="400" height="18" fill="#eceafd"/>
+  <text x="60" y="59" font-family="IBM Plex Mono, monospace" font-size="12" fill="#4441b0" font-weight="700">HEADER</text>
+  <circle cx="70" cy="45" r="5" fill="#5b5bd6"/>
+  <rect x="290" y="38" width="45" height="14" rx="7" fill="#5b5bd6"/>
+  <rect x="345" y="38" width="45" height="14" rx="7" fill="#c9c4f7"/>
+  <rect x="400" y="38" width="20" height="14" rx="7" fill="#c9c4f7"/>
+  <text x="60" y="72" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8a8fa8">MENU</text>
+
+  <rect x="40" y="76" width="400" height="164" fill="#f7f7fa"/>
+  <text x="60" y="102" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1b2340" font-weight="700">MAIN</text>
+  <rect x="60" y="114" width="180" height="110" rx="10" fill="#ffffff" stroke="#d6d6e2" stroke-width="1.5"/>
+  <rect x="255" y="114" width="165" height="50" rx="8" fill="#ffe4d3"/>
+  <rect x="255" y="174" width="165" height="14" rx="4" fill="#e2e2ea"/>
+  <rect x="255" y="196" width="120" height="14" rx="4" fill="#e2e2ea"/>
+
+  <rect x="40" y="240" width="400" height="50" rx="14" fill="#1b2340"/>
+  <text x="60" y="270" font-family="IBM Plex Mono, monospace" font-size="12" fill="#ffffff" font-weight="700">FOOTER</text>
+  <rect x="330" y="258" width="90" height="12" rx="6" fill="#5b5bd6"/>
+</svg>

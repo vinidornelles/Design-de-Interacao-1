@@ -1,0 +1,17 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="figCamadasTitle">
+  <title id="figCamadasTitle">Três cartões empilhados representando os trabalhos que serão adicionados ao site ao longo do semestre</title>
+  <rect x="0" y="0" width="480" height="320" fill="#ffffff"/>
+  <g>
+    <rect x="60" y="150" width="300" height="110" rx="16" fill="#e2e2ea"/>
+    <rect x="90" y="120" width="300" height="110" rx="16" fill="#d7d3fb"/>
+    <rect x="120" y="90" width="300" height="110" rx="16" fill="#ffffff" stroke="#5b5bd6" stroke-width="2.5"/>
+    <circle cx="150" cy="118" r="7" fill="#e2583e"/>
+    <circle cx="172" cy="118" r="7" fill="#e8a33d"/>
+    <circle cx="194" cy="118" r="7" fill="#29b087"/>
+    <line x1="140" y1="150" x2="400" y2="150" stroke="#d6d6e2" stroke-width="2"/>
+    <text x="140" y="180" font-family="IBM Plex Mono, monospace" font-size="15" fill="#1b2340" font-weight="700">trabalho-01 / editor.html</text>
+    <text x="140" y="204" font-family="IBM Plex Mono, monospace" font-size="12" fill="#8a8fa8">index.html · css/ · js/</text>
+    <rect x="140" y="216" width="220" height="8" rx="4" fill="#eceafd"/>
+    <rect x="140" y="216" width="150" height="8" rx="4" fill="#5b5bd6"/>
+  </g>
+</svg>

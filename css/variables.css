@@ -1,0 +1,59 @@
+:root {
+  /* ---------- Cor ---------- */
+  --color-canvas: #eeeef2;        
+  --color-canvas-alt: #e2e2ea;    
+  --color-surface: #ffffff;       
+  --color-border: #d6d6e2;        
+
+  --color-ink: #1b2340;           
+  --color-ink-soft: #545c78;      
+  --color-ink-faint: #8a8fa8;     
+
+  --color-accent: #5b5bd6;        
+  --color-accent-dark: #4441b0;
+  --color-accent-soft: #eceafd;
+
+  --color-amber: #e8a33d;        
+  --color-mint: #29b087;          
+  --color-coral: #e2583e;         
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.85rem;
+  --fs-2xl: 2.6rem;
+  --fs-3xl: 3.4rem;
+
+  
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(27, 35, 64, 0.06), 0 10px 26px -10px rgba(27, 35, 64, 0.18);
+  --shadow-pop: 0 4px 10px -2px rgba(27, 35, 64, 0.22);
+
+
+  --container-max: 1140px;
+  --header-height: 4.25rem;
+
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+}

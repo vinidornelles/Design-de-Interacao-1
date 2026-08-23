@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interação Web — Editor de menus</title>
+  <meta name="description" content="Editor que gera, ao vivo, um menu de navegação HTML personalizável.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <p class="brand">
+        <span class="brand__mark">◆</span>
+        Interação Web
+        <span class="brand__course">IFRS · 2026/2</span>
+      </p>
+
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li><a class="nav-link" href="index.html"><span class="nav-link__index">00</span> Apresentação</a></li>
+          <li><a class="nav-link" href="editor.html" aria-current="page"><span class="nav-link__index">01</span> Editor de menus</a></li>
+          <li><span class="nav-link nav-link--locked"><span class="nav-link__index">02</span> Trabalho 2 <span class="badge-soon">em breve</span></span></li>
+          <li><span class="nav-link nav-link--locked"><span class="nav-link__index">03</span> Trabalho 3 <span class="badge-soon">em breve</span></span></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="editor-intro">
+        <p class="section__eyebrow">Trabalho 01</p>
+        <h1>Editor de menus HTML</h1>
+        <p>
+          Monte um menu de navegação e veja o resultado mudar em tempo real. Adicione ou
+          remova itens, escolha uma imagem, cores, bordas e o espaçamento entre os itens —
+          tudo pelo formulário abaixo, sem precisar editar código.
+        </p>
+      </section>
+
+      <section class="editor-layout">
+        <div class="panel">
+          <div class="panel__header">
+            <h2>Formulário de edição</h2>
+            <span class="panel__count"><span id="itemCount">3</span>/8 itens</span>
+          </div>
+
+          <form class="editor-form" id="menuEditorForm" novalidate>
+
+            <fieldset class="field-group">
+              <legend>Itens do menu</legend>
+              <p class="field-group__hint">Mínimo de 1 item, máximo de 8. Cada texto aceita até 24 caracteres.</p>
+
+              <div class="item-list" id="itemList" aria-live="polite"></div>
+
+              <button type="button" class="btn-add" id="addItemBtn">+ Adicionar item</button>
+              <p class="field-error" id="itemsError" role="status"></p>
+            </fieldset>
+
+            <fieldset class="field-group">
+              <legend>Imagem</legend>
+              <p class="field-group__hint">Opcional. Formatos de imagem, até 2&nbsp;MB.</p>
+
+              <div class="field">
+                <label for="imageInput">Escolher imagem</label>
+                <input type="file" id="imageInput" name="imageInput" accept="image/*">
+              </div>
+
+              <div class="field">
+                <span class="field-legend-inline">Posição da imagem</span>
+                <div class="radio-group">
+                  <label><input type="radio" name="imagePosition" value="top" id="posTop" checked> Acima do menu</label>
+                  <label><input type="radio" name="imagePosition" value="side" id="posSide"> Ao lado do menu</label>
+                </div>
+              </div>
+
+              <button type="button" class="btn-add" id="removeImageBtn" disabled>Remover imagem</button>
+              <p class="field-error" id="imageError" role="status"></p>
+            </fieldset>
+
+            <fieldset class="field-group">
+              <legend>Cores</legend>
+
+              <div class="field field--color">
+                <label for="menuBgColor">Fundo do menu</label>
+                <input type="color" id="menuBgColor" name="menuBgColor" value="#eeeef2">
+              </div>
+              <div class="field field--color">
+                <label for="itemBgColor">Fundo dos itens</label>
+                <input type="color" id="itemBgColor" name="itemBgColor" value="#ffffff">
+              </div>
+              <div class="field field--color">
+                <label for="textColor">Cor do texto</label>
+                <input type="color" id="textColor" name="textColor" value="#1b2340">
+              </div>
+              <div class="field field--color">
+                <label for="borderColor">Cor da borda</label>
+                <input type="color" id="borderColor" name="borderColor" value="#5b5bd6">
+              </div>
+            </fieldset>
+
+            <fieldset class="field-group">
+              <legend>Texto</legend>
+
+              <div class="field">
+                <div class="field-inline">
+                  <label for="fontSize">Tamanho do texto</label>
+                  <span class="field-count" id="fontSizeValue">15px</span>
+                </div>
+                <input type="range" id="fontSize" name="fontSize" min="12" max="22" step="1" value="15">
+              </div>
+            </fieldset>
+
+            <fieldset class="field-group">
+              <legend>Bordas</legend>
+
+              <div class="field">
+                <div class="field-inline">
+                  <label for="borderWidth">Espessura da borda</label>
+                  <span class="field-count" id="borderWidthValue">0px</span>
+                </div>
+                <input type="range" id="borderWidth" name="borderWidth" min="0" max="6" step="1" value="0">
+              </div>
+
+              <div class="field">
+                <div class="field-inline">
+                  <label for="borderRadius">Arredondamento</label>
+                  <span class="field-count" id="borderRadiusValue">8px</span>
+                </div>
+                <input type="range" id="borderRadius" name="borderRadius" min="0" max="28" step="1" value="8">
+              </div>
+            </fieldset>
+
+            <fieldset class="field-group">
+              <legend>Tamanho e espaçamento</legend>
+
+              <div class="field">
+                <div class="field-inline">
+                  <label for="itemPadding">Tamanho dos itens</label>
+                  <span class="field-count" id="itemPaddingValue">10px</span>
+                </div>
+                <input type="range" id="itemPadding" name="itemPadding" min="4" max="24" step="1" value="10">
+              </div>
+
+              <div class="field">
+                <div class="field-inline">
+                  <label for="itemGap">Espaço entre itens</label>
+                  <span class="field-count" id="itemGapValue">8px</span>
+                </div>
+                <input type="range" id="itemGap" name="itemGap" min="0" max="32" step="1" value="8">
+              </div>
+
+              <div class="field">
+                <label for="menuJustify">Distribuição</label>
+                <select id="menuJustify" name="menuJustify">
+                  <option value="flex-start" selected>Início</option>
+                  <option value="center">Centro</option>
+                  <option value="space-between">Espaçado (bordas)</option>
+                  <option value="space-around">Espaçado (ao redor)</option>
+                  <option value="flex-end">Fim</option>
+                </select>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="preview-panel">
+          <p class="preview-panel__label"><span class="preview-panel__pulse"></span> Pré-visualização · ao vivo</p>
+          <div class="preview-canvas">
+            <div class="preview-stage" id="previewStage">
+              <!-- Imagem e <nav> gerados dinamicamente por js/editor.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__meta">
+        <strong>Paulo Vinícius Dornelles</strong>
+        <span class="site-footer__course">Interação Web · IFRS · 2026/2</span>
+      </div>
+      <nav class="site-footer__links">
+        <a href="https://github.com/vinidornelles/interacao-web" target="_blank" rel="noopener noreferrer">Repositório no GitHub</a>
+        <a href="index.html">Voltar à apresentação</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/editor.js"></script>
+</body>
+</html>
