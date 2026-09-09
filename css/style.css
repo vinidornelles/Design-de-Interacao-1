@@ -61,9 +61,6 @@ textarea:focus-visible {
   color: var(--color-ink-faint);
 }
 
-/* ===================================================================
-   Cabeçalho
-   =================================================================== */
 
 .site-header {
   position: sticky;
@@ -103,9 +100,6 @@ textarea:focus-visible {
   letter-spacing: 0.08em;
 }
 
-/* ===================================================================
-   Menu de navegação principal (cabeçalho)
-   =================================================================== */
 
 .main-nav__list {
   display: flex;
@@ -158,9 +152,6 @@ a.nav-link[aria-current="page"] .nav-link__index {
   border-radius: var(--radius-pill);
 }
 
-/* ===================================================================
-   Rodapé
-   =================================================================== */
 
 .site-footer {
   margin-top: var(--space-8);
@@ -199,9 +190,6 @@ a.nav-link[aria-current="page"] .nav-link__index {
   text-decoration: underline;
 }
 
-/* ===================================================================
-   Página de apresentação — layout em coluna única
-   =================================================================== */
 
 .hero {
   padding-block: var(--space-8) var(--space-7);
@@ -271,8 +259,7 @@ section + section {
   max-width: 62ch;
 }
 
-/* Bloco de conteúdo com figura ao lado (usado na apresentação) */
-.feature {
+
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: var(--space-7);
@@ -311,8 +298,6 @@ section + section {
   margin-top: var(--space-3);
 }
 
-/* Linha do tempo dos trabalhos — a ordem aqui é informação real:
-   os trabalhos são liberados em sequência ao longo do semestre. */
 .timeline {
   margin-top: var(--space-6);
   display: grid;
@@ -415,9 +400,6 @@ section + section {
   box-shadow: var(--shadow-pop);
 }
 
-/* ===================================================================
-   Responsivo
-   =================================================================== */
 
 @media (max-width: 860px) {
   .feature,
