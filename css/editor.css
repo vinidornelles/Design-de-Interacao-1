@@ -21,7 +21,6 @@
   padding-bottom: var(--space-8);
 }
 
-/* ---------- Painel de edição (formulário) ---------- */
 
 .panel {
   background: var(--color-surface);
@@ -87,7 +86,6 @@
   margin-top: 0;
 }
 
-/* Rótulos: mesmo estilo em qualquer campo do formulário */
 .field label,
 .field-legend-inline {
   display: block;
@@ -101,7 +99,6 @@
   margin-bottom: var(--space-2);
 }
 
-/* Rótulos "na mesma linha" do campo não precisam de espaço embaixo */
 .field-inline label,
 .field--color label,
 .radio-group label {
@@ -179,7 +176,6 @@
   color: var(--color-ink);
 }
 
-/* ---------- Lista dinâmica de itens do menu ---------- */
 
 .item-list {
   display: flex;
@@ -259,7 +255,6 @@
   min-height: 1em;
 }
 
-/* ---------- Área de pré-visualização ---------- */
 
 .preview-panel {
   position: sticky;
@@ -319,9 +314,6 @@
   object-fit: cover;
 }
 
-/* O <nav> gerado pelo JavaScript recebe estilo via variáveis
-   (--menu-bg, --item-bg etc.), definidas em linha pelo editor.js
-   conforme o usuário altera o formulário. */
 .generated-menu {
   max-width: 100%;
   background: var(--menu-bg, var(--color-canvas));
@@ -358,7 +350,6 @@
   text-align: center;
 }
 
-/* ---------- Responsivo ---------- */
 
 @media (max-width: 960px) {
   .editor-layout {
