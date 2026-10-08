@@ -1,41 +1,41 @@
 var prova = {
-  titulo: 'Prova de Web Components',
+  titulo: 'Prova de Desenvolvimento Web',
   questoes: [
     {
-      pergunta: 'Qual método do JavaScript registra uma tag customizada no navegador?',
+      pergunta: 'Qual linguagem é usada para criar a estrutura de uma página web?',
       alternativas: [
-        'document.createElement()',
-        'customElements.define()',
-        'document.getElementById()'
-      ],
-      correta: 1
-    },
-    {
-      pergunta: 'Para que serve o shadow DOM em um web component?',
-      alternativas: [
-        'Para encapsular o HTML e o CSS do componente, separando do resto da página',
-        'Para deixar a página escura no modo noturno',
-        'Para guardar os dados do componente no servidor'
+        'HTML',
+        'CSS',
+        'Python'
       ],
       correta: 0
     },
     {
-      pergunta: 'Qual tag marca o lugar onde aparece o conteúdo escrito dentro do componente?',
+      pergunta: 'Qual linguagem é usada para mudar as cores e o visual da página?',
       alternativas: [
-        'div',
-        'span',
-        'slot'
+        'JavaScript',
+        'CSS',
+        'HTML'
+      ],
+      correta: 1
+    },
+    {
+      pergunta: 'Qual linguagem faz a página responder aos cliques do usuário?',
+      alternativas: [
+        'HTML',
+        'CSS',
+        'JavaScript'
       ],
       correta: 2
     },
     {
-      pergunta: 'O que o nome de uma tag customizada precisa ter obrigatoriamente?',
+      pergunta: 'Qual destes programas é um navegador de internet?',
       alternativas: [
-        'Uma letra maiúscula',
-        'Um hífen',
-        'Um número'
+        'Google Chrome',
+        'Microsoft Word',
+        'Bloco de Notas'
       ],
-      correta: 1
+      correta: 0
     }
   ]
 };
