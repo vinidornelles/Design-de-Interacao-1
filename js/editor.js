@@ -6,7 +6,6 @@ var MAX_TAMANHO_IMAGEM_MB = 2;
 var itens = ['Início', 'Sobre', 'Contato'];
 var imagemDataUrl = null;
 
-// Referências dos elementos do formulário (todos existem no editor.html)
 var itemListEl, itemCountEl, addItemBtn, itemsErrorEl;
 var imageInput, imageErrorEl, removeImageBtn, posTop, posSide;
 var menuBgColor, itemBgColor, textColor, borderColor;

@@ -34,7 +34,6 @@ textarea:focus-visible {
   border-radius: var(--radius-sm);
 }
 
-/* Esconde visualmente mas mantém acessível a leitores de tela */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -47,9 +46,6 @@ textarea:focus-visible {
   border: 0;
 }
 
-/* Rótulo pequeno em fonte monoespaçada — usado em vários pontos do
-   site (marca, menu, seções, rodapé, legendas, status). Cada seletor
-   abaixo só acrescenta o que muda de um caso pro outro. */
 .brand__course,
 .nav-link__index,
 .section__eyebrow,
@@ -61,14 +57,19 @@ textarea:focus-visible {
   color: var(--color-ink-faint);
 }
 
-/* ===================================================================
-   Cabeçalho
-   =================================================================== */
+site-header,
+site-nav,
+site-footer {
+  display: block;
+}
 
-.site-header {
+site-header {
   position: sticky;
   top: 0;
   z-index: 50;
+}
+
+.site-header {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
 }
@@ -102,10 +103,6 @@ textarea:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-
-/* ===================================================================
-   Menu de navegação principal (cabeçalho)
-   =================================================================== */
 
 .main-nav__list {
   display: flex;
@@ -158,10 +155,6 @@ a.nav-link[aria-current="page"] .nav-link__index {
   border-radius: var(--radius-pill);
 }
 
-/* ===================================================================
-   Rodapé
-   =================================================================== */
-
 .site-footer {
   margin-top: var(--space-8);
   border-top: 1px solid var(--color-border);
@@ -198,10 +191,6 @@ a.nav-link[aria-current="page"] .nav-link__index {
 .site-footer__links a:hover {
   text-decoration: underline;
 }
-
-/* ===================================================================
-   Página de apresentação — layout em coluna única
-   =================================================================== */
 
 .hero {
   padding-block: var(--space-8) var(--space-7);
@@ -271,7 +260,6 @@ section + section {
   max-width: 62ch;
 }
 
-/* Bloco de conteúdo com figura ao lado (usado na apresentação) */
 .feature {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -311,8 +299,6 @@ section + section {
   margin-top: var(--space-3);
 }
 
-/* Linha do tempo dos trabalhos — a ordem aqui é informação real:
-   os trabalhos são liberados em sequência ao longo do semestre. */
 .timeline {
   margin-top: var(--space-6);
   display: grid;
@@ -405,6 +391,12 @@ section + section {
     box-shadow var(--dur-fast) var(--ease-standard);
 }
 
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
 .btn--primary {
   background: var(--color-ink);
   color: var(--color-surface);
@@ -415,11 +407,11 @@ section + section {
   box-shadow: var(--shadow-pop);
 }
 
-/* ===================================================================
-   Responsivo
-   =================================================================== */
-
 @media (max-width: 860px) {
+  site-header {
+    position: static;
+  }
+
   .feature,
   .feature--reverse .feature__figure {
     grid-template-columns: 1fr;

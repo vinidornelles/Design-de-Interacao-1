@@ -15,24 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <p class="brand">
-        <span class="brand__mark">◆</span>
-        Design de Interação
-        <span class="brand__course">IFRS · 2026/2</span>
-      </p>
-
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li><a class="nav-link" href="index.html" aria-current="page"><span class="nav-link__index">00</span> Apresentação</a></li>
-          <li><a class="nav-link" href="editor.html"><span class="nav-link__index">01</span> Editor de menus</a></li>
-          <li><span class="nav-link nav-link--locked"><span class="nav-link__index">02</span> Trabalho 2 <span class="badge-soon">em breve</span></span></li>
-          <li><span class="nav-link nav-link--locked"><span class="nav-link__index">03</span> Trabalho 3 <span class="badge-soon">em breve</span></span></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <site-header></site-header>
 
   <main>
     <div class="container">
@@ -115,12 +98,12 @@
               <span class="timeline__status timeline__status--live">Disponível agora</span>
             </div>
           </li>
-          <li class="timeline__item timeline__item--locked">
+          <li class="timeline__item">
             <span class="timeline__index">02</span>
             <div>
-              <h3>Trabalho 2</h3>
-              <p>Descrição e link serão adicionados quando o trabalho for publicado.</p>
-              <span class="timeline__status timeline__status--soon">Em breve</span>
+              <h3>Prova on-line</h3>
+              <p>Prova de múltipla escolha feita como um web component, com correção e nota na hora.</p>
+              <span class="timeline__status timeline__status--live">Disponível agora</span>
             </div>
           </li>
           <li class="timeline__item timeline__item--locked">
@@ -158,24 +141,16 @@
           </article>
         </div>
 
-        <p class="section__intro">
+        <p class="section__intro btn-group">
           <a class="btn btn--primary" href="editor.html">Ver o editor de menus →</a>
+          <a class="btn btn--primary" href="prova.html">Fazer a prova on-line →</a>
         </p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__meta">
-        <strong>Paulo Vinícius Dornelles</strong>
-        <span class="site-footer__course">Design de Interação · IFRS · 2026/2</span>
-      </div>
-      <nav class="site-footer__links">
-        <a href="https://github.com/SEU-USUARIO/interacao-web" target="_blank" rel="noopener noreferrer">Repositório no GitHub</a>
-        <a href="editor.html">Editor de menus</a>
-      </nav>
-    </div>
-  </footer>
+  <site-footer></site-footer>
+
+  <script src="js/componentes.js"></script>
 </body>
 </html>

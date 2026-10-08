@@ -16,24 +16,7 @@
   <link rel="stylesheet" href="css/editor.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <p class="brand">
-        <span class="brand__mark">◆</span>
-        Design de Interação
-        <span class="brand__course">IFRS · 2026/2</span>
-      </p>
-
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li><a class="nav-link" href="index.html"><span class="nav-link__index">00</span> Apresentação</a></li>
-          <li><a class="nav-link" href="editor.html" aria-current="page"><span class="nav-link__index">01</span> Editor de menus</a></li>
-          <li><span class="nav-link nav-link--locked"><span class="nav-link__index">02</span> Trabalho 2 <span class="badge-soon">em breve</span></span></li>
-          <li><span class="nav-link nav-link--locked"><span class="nav-link__index">03</span> Trabalho 3 <span class="badge-soon">em breve</span></span></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <site-header></site-header>
 
   <main>
     <div class="container">
@@ -176,28 +159,16 @@
         <div class="preview-panel">
           <p class="preview-panel__label"><span class="preview-panel__pulse"></span> Pré-visualização · ao vivo</p>
           <div class="preview-canvas">
-            <div class="preview-stage" id="previewStage">
-              <!-- Imagem e <nav> gerados dinamicamente por js/editor.js -->
-            </div>
+            <div class="preview-stage" id="previewStage"></div>
           </div>
         </div>
       </section>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__meta">
-        <strong>Paulo Vinícius Dornelles</strong>
-        <span class="site-footer__course">Design de Interação · IFRS · 2026/2</span>
-      </div>
-      <nav class="site-footer__links">
-        <a href="https://github.com/SEU-USUARIO/interacao-web" target="_blank" rel="noopener noreferrer">Repositório no GitHub</a>
-        <a href="index.html">Voltar à apresentação</a>
-      </nav>
-    </div>
-  </footer>
+  <site-footer></site-footer>
 
+  <script src="js/componentes.js"></script>
   <script src="js/editor.js"></script>
 </body>
 </html>

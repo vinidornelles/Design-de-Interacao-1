@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design de Interação — Prova on-line</title>
+  <meta name="description" content="Prova on-line de múltipla escolha feita como um web component.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <site-header></site-header>
+
+  <main>
+    <div class="container">
+      <section>
+        <p class="section__eyebrow">Trabalho 02</p>
+        <h1 class="section__title">Prova on-line</h1>
+        <p class="section__intro">
+          Uma prova de múltipla escolha sobre web components. A prova inteira é um
+          web component: basta colocar a tag <code>&lt;minha-prova&gt;</code> na página.
+        </p>
+
+        <caixa-aviso>
+          <span slot="titulo">Como funciona</span>
+          <p>
+            Marque uma alternativa em cada questão e clique em <strong>Corrigir prova</strong>.
+            Você vai ver a sua nota, o que respondeu e as respostas corretas, e pode
+            responder de novo quantas vezes quiser.
+          </p>
+        </caixa-aviso>
+
+        <minha-prova></minha-prova>
+      </section>
+    </div>
+  </main>
+
+  <site-footer></site-footer>
+
+  <script src="js/componentes.js"></script>
+  <script src="js/prova.js"></script>
+</body>
+</html>
